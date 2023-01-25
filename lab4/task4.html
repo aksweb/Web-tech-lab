@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+        main{
+            height:50%;
+            background-color: aqua;
+
+        } 
+        </style>
+    </head>
+    <body>
+        <Button onclick="window.location.href = './index.html'">Task 1</Button>
+        <Button onclick="window.location.href = './task2.html'">Task 2</Button>
+        <Button onclick="window.location.href = './task3.html'">Task 3</Button>
+        <Button onclick="window.location.href = './task4.html'">Task 4</Button>
+        <Button onclick="window.location.href = './task5.html'">Task 5</Button>
+        <Button onclick="window.location.href = './task6.html'">Task 6</Button>
+
+        <main id="thisMain">
+            <h1>This is the main section.</h1>
+            <h2>This is going to be replaced.</h2>
+        </main>
+        <div>
+            <h1>This is outside main.</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic quos in laboriosam aut laborum obcaecati voluptate repellat dolorum exercitationem architecto facere, doloremque accusantium officiis dolorem, repellendus id nobis veniam. Corrupti quas, beatae sed sequi numquam aliquam commodi quia nemo enim accusamus doloribus nobis hic atque veritatis, impedit excepturi, suscipit incidunt.</p>
+        </div>
+        <button onclick="changeMain()">Click me</button>
+
+        <script type="text/javascript">
+            changeMain= function (){
+                // document.querySelector.
+
+                let myElement = document.querySelector("#thisMain");
+                myElement.innerHTML='<h1>Contents has been changed</h1>'
+                myElement.style.backgroundColor = "#D93600";
+            }
+            
+        </script>
+    
+    </body>
+</html>

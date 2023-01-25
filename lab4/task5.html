@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <Button onclick="window.location.href = './index.html'">Task 1</Button>
+        <Button onclick="window.location.href = './task2.html'">Task 2</Button>
+        <Button onclick="window.location.href = './task3.html'">Task 3</Button>
+        <Button onclick="window.location.href = './task4.html'">Task 4</Button>
+        <Button onclick="window.location.href = './task5.html'">Task 5</Button>
+        <Button onclick="window.location.href = './task6.html'">Task 6</Button>
+
+        
+        <h1 id="new">This is heading 1</h1>
+        <h2>Continous color changr</h2>
+        <label for="redi">Red:</label>
+        <input type="range" min=0 max=255 id="redi"  onchange="changeColor()"/><br>
+        
+        <label for="greeni">Green</label>
+        <input type="range" min=0 max=255 id="greeni"  onchange="changeColor()"/><br>
+
+        <label for="bluei">Blue</label>
+        <input type="range" min=0 max=255 id="bluei" value="200" onchange="changeColor()"/><br>
+
+        <h2>Continous color on button click</h2>
+       
+        <button onclick="changeUsingButton()">Change color</button>
+
+        <h2>Method 3</h2>
+        <button onclick="stop()">Stop Changing Color</button>
+
+        <script>
+            changeUsingButton = function(){
+               document.getElementById("new").style.color = 'red';
+
+            }
+            changeColor= function (){
+                red= document.querySelector('#redi').value;
+                green = document.querySelector('#greeni').value;
+                blue = document.querySelector('#bluei').value;
+                console.log(blue);
+                colorStr= "rgb(" + red + "," + green + "," + blue + ")";
+                document.getElementById("new").style.color=colorStr;
+            }
+            
+            changeColorAuto= function(){
+                red=Math.floor(Math.random()*255);
+                green= Math.floor(Math.random() * 255);
+                blue= Math.floor(Math.random() * 255);
+                colorStr = "rgb(" + red + "," + green + "," + blue + ")";
+                
+                document.getElementById("new").style.color = colorStr;
+            }
+            stop= function(){
+                window.clearInterval(intId);
+            }
+            intId=window.setInterval(changeColorAuto, 1000);
+        </script>
+
+    
+    </body>
+</html>

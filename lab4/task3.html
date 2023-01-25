@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myclass {
+            background-color: rgb(205, 56, 56);
+        }
+    </style>
+</head>
+
+<body>
+    <Button onclick="window.location.href = './index.html'">Task 1</Button>
+    <Button onclick="window.location.href = './task2.html'">Task 2</Button>
+    <Button onclick="window.location.href = './task3.html'">Task 3</Button>
+    <Button onclick="window.location.href = './task4.html'">Task 4</Button>
+    <Button onclick="window.location.href = './task5.html'">Task 5</Button>
+    <Button onclick="window.location.href = './task6.html'">Task 6</Button>
+
+    <h1>I am a web developer </h1>
+    <button onclick="changefunc();"> click Me</button>
+    <script type="text/javascript">
+        changefunc = function () {
+            alert("press ok for furthur process" + document.body.className);
+            document.body.classname = "myclass";
+            document.body.style.backgroundColor = "#5addaa";
+            document.body.innerHTML = "<h1> And a compititive programmer. <code>really ?</code></h1>";
+            alert("again press ok" + document.body.className);
+            document.body.classname = "myclass2";
+        }
+    </script>
+</body>
+
+</html>
