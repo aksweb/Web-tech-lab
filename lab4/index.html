@@ -15,10 +15,13 @@
         <Button onclick="window.location.href = './task6.html'">Task 6</Button>
         
         <h1>This is task 1</h1>
-    <button onclick="changebgcolor()">Change background</button>
+    <button onclick="changebgcolor()">Change background and text</button>
     <script type="text/javascript">
         changebgcolor= function(){
+             var heading = document.body.querySelector('h1');
+            
             document.body.style.backgroundColor='#734c78'
+            heading.innerHTML = 'Heading changed';
         }
     </script>
     </body>
