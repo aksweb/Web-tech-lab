@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+
+            <style>
+                *{
+            text-align: center;
+        }
+                .spin {
+                    animation-name: spin;
+                    animation-duration: 1000ms;
+                    animation-iteration-count: infinite;
+                    /* border: 1px solid black; */
+                }
+            
+                @keyframes spin {
+            
+                    0%,
+                    100% {
+            
+            
+                        transform: rotate(3deg);
+                    }
+            
+                    50% {
+                        transform: rotate(-3deg);
+                    }
+            
+                }
+                 button {
+            width: 150px;
+            height: 32px;
+            margin-top: 20px;
+            padding: 6px 12px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.42857;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            touch-action: manipulation;
+            cursor: pointer;
+            user-select: none;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+                
+            </style>
+
+</head>
+
+<body>
+    <div class="main">
+        
+        <Button onclick="window.location.href = './index.html'">Task 1</Button>
+            <Button onclick="window.location.href = './task2.html'">Task 2</Button>
+            <Button onclick="window.location.href = './task3.html'">Task 3</Button>
+            <Button onclick="window.location.href = './task4.html'">Task 4</Button>
+            <Button onclick="window.location.href = './task5.html'">Task 5</Button>
+            <Button onclick="window.location.href = './task6.html'">Task 6</Button>
+            <Button onclick="window.location.href = './task7.html'">Task 7</Button>
+            
+            <h2 class="changeMe">Hello, Enter Your Name</h2>
+            <input type="text" id="inp">
+            <button onclick="changeHeading()">This is me!</button>
+            
+        </div>
+            
+            <script type="text/javascript">
+        changeHeading = function () {
+            document.body.querySelector(".changeMe").innerHTML = document.body.querySelector("#inp").value;
+            
+             document.body.querySelector(".changeMe").className="changeMe spin";
+        }
+        </script>
+
+
+</body>
+
+</html>

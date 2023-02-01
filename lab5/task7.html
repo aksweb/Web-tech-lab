@@ -1,0 +1,128 @@
+<html>
+
+<head>
+    <style>
+        *{
+            text-align: center;
+        }
+        .container {
+            width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        label {
+            width: 150px;
+            text-align: right;
+            padding-right: 20px;
+        }
+
+        input[type="number"],
+        select {
+            width: 150px;
+            height: 32px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 150px;
+            height: 32px;
+            margin-top: 20px;
+            padding: 6px 12px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.42857;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            touch-action: manipulation;
+            cursor: pointer;
+            user-select: none;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+    
+        <Button onclick="window.location.href = './index.html'">Task 1</Button>
+        <Button onclick="window.location.href = './task2.html'">Task 2</Button>
+        <Button onclick="window.location.href = './task3.html'">Task 3</Button>
+        <Button onclick="window.location.href = './task4.html'">Task 4</Button>
+        <Button onclick="window.location.href = './task5.html'">Task 5</Button>
+        <Button onclick="window.location.href = './task6.html'">Task 6</Button>
+        <Button onclick="window.location.href = './task7.html'">Task 7</Button>
+    
+    </div>
+    <br>
+
+    <div class="container">
+        <h1>Tip Calculator</h1>
+        <div class="form-group">
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" step="0.01">
+        </div>
+        <div class="form-group">
+            <label for="tipPercentage">Tip Percentage:</label>
+            <select id="tipPercentage">
+                <option value="0.1">10%</option>
+                <option value="0.15">15%</option>
+                <option value="0.2">20%</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="people">Split among:</label>
+            <input type="number" id="people" value="1">
+        </div>
+        <button id="calculateTip" onclick="cal()">Calculate</button>
+        <hr>
+        <h2>Tip: <span id="tip">Rs:0.00</span></h2>
+        <h2>Total:<span id="total">Rs:0.00</span></h2>
+    </div>
+    <script>
+
+
+
+
+
+        const calculateTip = document.querySelector('#calculateTip');
+        const amountInput = document.querySelector('#amount');
+        const tipPercentageSelect = document.querySelector('#tipPercentage');
+        const peopleInput = document.querySelector('#people');
+        const tipSpan = document.querySelector('#tip');
+        const totalSpan = document.querySelector('#total');
+
+
+        cal = function () {
+            const amount = parseFloat(amountInput.value);
+            const tipPercentage = parseFloat(tipPercentageSelect.value);
+            const people = parseInt(peopleInput.value);
+
+            tip = (amount * tipPercentage) / people;
+            total = amount + tip*people;
+            document.querySelector('#tip').innerHTML = tip;
+            document.querySelector('#total').innerHTML = total;
+        };
+
+    </script>
+
+</body>
+
+</html>

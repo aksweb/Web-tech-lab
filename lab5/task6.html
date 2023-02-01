@@ -1,0 +1,81 @@
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+    *{
+            text-align: center;
+        }
+         button {
+            width: 150px;
+            height: 32px;
+            margin-top: 20px;
+            padding: 6px 12px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.42857;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            touch-action: manipulation;
+            cursor: pointer;
+            user-select: none;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+    
+        <Button onclick="window.location.href = './index.html'">Task 1</Button>
+        <Button onclick="window.location.href = './task2.html'">Task 2</Button>
+        <Button onclick="window.location.href = './task3.html'">Task 3</Button>
+        <Button onclick="window.location.href = './task4.html'">Task 4</Button>
+        <Button onclick="window.location.href = './task5.html'">Task 5</Button>
+        <Button onclick="window.location.href = './task6.html'">Task 6</Button>
+        <Button onclick="window.location.href = './task7.html'">Task 7</Button>
+    
+    </div>
+    <br>
+
+    <table id="tab"></table>
+
+    <button onclick="makePage()">Click Here</button>
+    <script>
+        makePage= function(){
+
+            head= document.createElement('h1');
+            h1Cont= document.createTextNode("I am an H1");
+            head.appendChild(h1Cont);
+            document.body.appendChild(head);
+
+            para= document.createElement('p');
+            pCont= document.createTextNode("This is a paragraph followed by a list");
+            para.appendChild(pCont);
+            document.body.appendChild(para);
+
+            var ol = document.createElement("ol");
+            ol.setAttribute("type", "I");   
+
+            var li=document.createElement('li');
+            var liVal1= document.createTextNode("This is first");
+            li.appendChild(liVal1);
+            ol.appendChild(li);
+            
+            var li = document.createElement('li');
+            liVal2 = document.createTextNode("This is second");
+            li.appendChild(liVal2);
+            ol.appendChild(li);
+
+            document.body.appendChild(ol);
+
+        }
+        
+    </script>
+</body>
+
+</html>
